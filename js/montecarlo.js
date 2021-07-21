@@ -29,7 +29,7 @@ class montecarlo {
 
     var timer1 = new vbTimer();
     timer1.interval = 30;
-    var nl = new nylon();
+   // var nl = new nylon();
 
     timer1.timer = () => {
       var x_in = new Array( 100 );
@@ -85,7 +85,7 @@ class montecarlo {
         this.inner = 0;
       }
     }
-
+/**
     nl.on( "start", ( key, params ) => {
       timer1.enable();
     });
@@ -110,7 +110,7 @@ class montecarlo {
       this.inner = 0;
       this.N = this.number/100;
       elm5.innerHTML = "理論値：" + Math.round( this.answer * 10000 ) / 10000;
-    });
+    });**/
   }
 
   background() {
@@ -142,7 +142,7 @@ class montecarlo {
   }
 }
 
-var guisetup = () => {
+/**var guisetup = () => {
 	var nl = new nylon();
 	document.getElementById("start").addEventListener( "click", () => {
 		nl.emit( "start", null );
@@ -183,12 +183,12 @@ var guisetup = () => {
     nl.emit( "stop", null );
     nl.emit( "dimension", { "dimension":5, "answer":8.0*Math.PI*Math.PI/15.0 } );
   });
-}
+}**/
 
 
 
 window.addEventListener("load", function(e) {
-  guisetup();
+  //guisetup();
 
   var x = new montecarlo(
     document.getElementById('graph1'),
